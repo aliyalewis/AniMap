@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  desc: MyString
+  region_id: 1
+  sciName: MyString
+  countries: MyString
+  aniClass: MyString
+  image: MyString
+
+two:
+  name: MyString
+  desc: MyString
+  region_id: 1
+  sciName: MyString
+  countries: MyString
+  aniClass: MyString
+  image: MyString
