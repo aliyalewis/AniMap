@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import AnimalCard from "./AnimalCard"
+import AnimalCard from "./AnimalCard";
+import MainHeader from "./MainHeader";
+import AnimalHeader from "./AnimalHeader";
 
 class Mammals extends Component {
   state = {
@@ -19,8 +21,10 @@ class Mammals extends Component {
   render() {
     return (
       <div>
+        <MainHeader />
+        <AnimalHeader />
         {this.state.animals.map(animal => {
-          if (animal.animalClass === "Mammal") {
+          if (animal.aniClass === "Mammal") {
             return <AnimalCard key={animal.id} animal={animal} />
           }
         })}

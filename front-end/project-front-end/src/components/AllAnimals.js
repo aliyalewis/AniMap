@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import axios from "axios"
 import AnimalCard from "./AnimalCard";
 import AnimalHeader from "./AnimalHeader";
 import MainHeader from "./MainHeader";
