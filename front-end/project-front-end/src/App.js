@@ -4,6 +4,15 @@ import axios from "axios";
 import Home from './components/Home';
 import Dashboard from "./components/Dashboard";
 import Map from "./components/Map";
+import AllAnimals from "./components/AllAnimals";
+import FilteredAnimals from "./containers/FilteredAnimals";
+import AnimalCard from "./components/AnimalCard";
+import Regions from "./containers/Regions";
+import Fish from "./components/Fish";
+import Mammals from "./components/Mammals";
+import Reptiles from "./components/Reptiles";
+import Amphibians from "./components/Amphibians";
+import Birds from "./components/Birds";
 
 export default class App extends Component {
 
@@ -70,6 +79,14 @@ export default class App extends Component {
             )}
             />
             <Route path="/map" exact component={Map}/>
+            <Route path="/animals/:id" exact component={FilteredAnimals} />
+            <Route path="/allanimals" exact component={AllAnimals} />
+            <Route path="/regions" exact component={Regions} />
+            <Route path="/mammals" exact component={Mammals} />
+            <Route path="/fish" exact component={Fish} />
+            <Route path="/reptiles" exact component={Reptiles} />
+            <Route path="/amphibians" exact component={Amphibians} />
+            <Route path="/birds" exact component={Birds} />
           </Switch>
         </BrowserRouter>
       </div>

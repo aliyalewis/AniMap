@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import regionData from "../data/region-locations.js";
 import mapImg from "../maps-and-flags.png";
-// import MainHeader from "./MainHeader"
+import MainHeader from "./MainHeader"
 
 function Map() {
   const [viewport, setViewport] = useState({
@@ -24,7 +24,7 @@ function Map() {
 
   let fetchRegion = () => {
     if (selectedRegion) {
-      fetch(`http://localhost:3000/regions/${selectedRegion.id}`)
+      fetch(`http://localhost:3001/regions/${selectedRegion.id}`)
         .then(res => res.json())
         .then(json => {
           return setLocation(json);
@@ -45,10 +45,12 @@ function Map() {
    };
  }, []);
 
- console.log('token', process.env.REACT_APP_ANIMAP_TOKEN)
+ console.log(location)
+
   return (
     <div>
       <div>
+        <MainHeader />
           <ReactMapGL
             {...viewport}
             // mapboxApiAccessToken={process.env.REACT_APP_ANIMAP_TOKEN}
@@ -80,8 +82,8 @@ function Map() {
               <Popup
                 latitude={selectedRegion.latitude}
                 longitude={selectedRegion.longitude}>
-                <h3>{location ? location.name : null}</h3>
-                <p>{location ? location.description : null}</p>
+                <h3>{location.name}</h3>
+                <p>{location ? location.desc : null}</p>
                 <h4>Countries within {selectedRegion.name}:</h4>
                 <p>{location ? location.countries : null}</p>
                 <Link to={'/animals/' + selectedRegion.id}>Learn more about {selectedRegion.name} animals</Link>
