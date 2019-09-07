@@ -13,6 +13,7 @@ import Mammals from "./components/Mammals";
 import Reptiles from "./components/Reptiles";
 import Amphibians from "./components/Amphibians";
 import Birds from "./components/Birds";
+import Favorites from "./components/Favorites";
 
 export default class App extends Component {
 
@@ -62,9 +63,32 @@ export default class App extends Component {
       })
   }
 
+  handleDelete = () => {
+    axios.get("http://localhost:3001/logged_in", { withCredentials: true })
+      .then(res => {
+        this.setState({
+          user: res.data.user
+        })
+      })
+
+    fetch(`http://localhost:3001/users/${this.state.user.id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        user: this.state.user
+      })
+    })
+  }
+
+
+
   render() {
     return (
       <div className='app'>
+      <button onClick={() => this.handleDelete()}>Delete Account</button>
+
         <BrowserRouter>
           <Switch>
             <Route exact path={"/"}
@@ -87,6 +111,7 @@ export default class App extends Component {
             <Route path="/reptiles" exact component={Reptiles} />
             <Route path="/amphibians" exact component={Amphibians} />
             <Route path="/birds" exact component={Birds} />
+            <Route path="/favorites" exact component={Favorites} />
           </Switch>
         </BrowserRouter>
       </div>
