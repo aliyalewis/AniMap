@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import { BrowserRouter } from "react-router-dom";
 import reducers from "./reducers";
-import App from "./components/app";
+import App from "./app";
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route} from "react-router-dom";
 import axios from "axios";
-import Home from './Home';
-import Dashboard from "./Dashboard";
+import Home from './components/Home';
+import Dashboard from "./components/Dashboard";
+import Map from "./components/Map";
 
 export default class App extends Component {
 
@@ -68,6 +69,7 @@ export default class App extends Component {
 
             )}
             />
+            <Route path="/map" exact component={Map}/>
           </Switch>
         </BrowserRouter>
       </div>
