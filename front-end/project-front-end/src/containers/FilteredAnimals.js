@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router";
 import AnimalCard from "../components/AnimalCard";
-import MainHeader from "../components/MainHeader"
+import MainHeader from "../components/MainHeader";
 
 class FilteredAnimals extends Component {
   state = {
@@ -21,10 +21,11 @@ class FilteredAnimals extends Component {
   render() {
     return (
       <div>
+        <MainHeader />
         <p>
           {this.state.animals.map(animal => {
             if ("" + animal.region_id === this.props.match.params.id) {
-              return <div> <MainHeader /> <AnimalCard animal={animal} /></div>;
+              return <div> <AnimalCard animal={animal} /></div>;
             }
           })}
         </p>

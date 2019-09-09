@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AnimalCard from "./AnimalCard";
-import AnimalHeader from "./AnimalHeader";
 import MainHeader from "./MainHeader";
+import AnimalHeader from "./AnimalHeader";
 
 class AllAnimals extends Component {
   state = {
@@ -21,7 +21,8 @@ class AllAnimals extends Component {
   render() {
     return (
       <div>
-        <AnimalHeader />
+      <MainHeader />
+      <AnimalHeader />
         <div>
           {this.state.animals.map(animal => {
             return <AnimalCard key={animal.id} animal={animal} />;
