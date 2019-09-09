@@ -15,4 +15,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    user = User.find_by(id: params["user"]["id"])
+    user.destroy
+  end
+
 end
