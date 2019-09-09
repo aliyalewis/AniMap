@@ -13,7 +13,7 @@ class Notes extends Component {
   }
 
   componentDidMount(props) {
-    fetch(`http://localhost:3001/comments`)
+    fetch("http://localhost:3001/comments")
       .then(res => res.json())
       .then(json => {
         this.setState({
