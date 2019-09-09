@@ -11,14 +11,12 @@ class CommentsController < ApplicationController
   end
 
   def new
-    comment = Comment.new(title: params["comment"]["title"], body: params["comment"]["body"], user_id: params["coment"]["user_id"])
+    comment = Comment.new
   end
 
   def create
-    if comment
-      comment = Comment.save(title: params["comment"]["title"], body: paramas["comment"]["body"], user_id: params["comment"]["user_id"])
+      comment = Comment.create(title: params["comment"]["title"], body: params["comment"]["body"], user_id: params["comment"]["user_id"])
       render json: comment
-    end
   end
 
   def update
