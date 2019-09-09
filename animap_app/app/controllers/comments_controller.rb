@@ -6,8 +6,8 @@ class CommentsController < ApplicationController
   end
 
   def show
-    comment = Region.find_by(id: params["comment"]["id"])
-    render json: region
+    comment = Comment.find_by(id: params[:id])
+    render json: comment
   end
 
   def new

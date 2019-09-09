@@ -45,8 +45,6 @@ function Map() {
    };
  }, []);
 
- console.log(location)
-
   return (
     <div>
       <div>

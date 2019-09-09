@@ -6,7 +6,8 @@ function MainHeader(props) {
     <div>
       <Link to="/map">Map </Link>| <Link to="/allanimals">Animals </Link>|{" "}
       <Link to="/regions">Regions </Link>|{" "}
-      <Link to="/">Log In/Log Out</Link>
+      <Link to="/">Log In/Log Out</Link>| {" "}
+      <Link to="/notes">Notes</Link>
     </div>
   );
 }

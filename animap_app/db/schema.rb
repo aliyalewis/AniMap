@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 2019_09_05_194428) do
   create_table "comments", force: :cascade do |t|
     t.string "title"
     t.string "body"
-    t.integer "animal_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -113,4 +113,10 @@ Animal.create(name: "Cuban Tree Frog", sciName: "Osteopilus septentrionalis", de
 
 User.create(name: "Aliya", username: "liya", password: "111")
 
+# Comment.create(title: "I love animals", body: "Animals are the best!", user_id: 1)
+#
+# Comment.create(title: "I love fish", body: "Fish are the best!", user_id: 1)
+#
+# Comment.create(title: "I love reptiles", body: "Reptiles are the best!", user_id: 1)
+
 # Animal.create(name: "", sciName: "", desc: "", region_id: , countries: "", aniClass: "", image: "")

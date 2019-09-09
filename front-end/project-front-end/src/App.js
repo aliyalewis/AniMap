@@ -14,13 +14,14 @@ import Reptiles from "./components/Reptiles";
 import Amphibians from "./components/Amphibians";
 import Birds from "./components/Birds";
 import Favorites from "./components/Favorites";
+import Notes from "./containers/Notes";
 
 export default class App extends Component {
 
   constructor(){
     super();
     this.state = {
-      loggedInStatus: "NOT_LOGGED_IN",
+      loggedInStatus: "Not logged in",
       user: {}
     }
   }
@@ -31,14 +32,14 @@ export default class App extends Component {
 
   handleLogin = (data) => {
     this.setState({
-      loggedInStatus: "LOGGED_IN",
+      loggedInStatus: "Logged in",
       user: data.user
     })
   }
 
   handleLogout = () => {
     this.setState({
-      loggedInStatus: "NOT_LOGGED_IN",
+      loggedInStatus: "Not logged in",
       user: {}
     })
   }
@@ -46,14 +47,14 @@ export default class App extends Component {
   checkLoginStatus() {
     axios.get("http://localhost:3001/logged_in", { withCredentials: true })
       .then(res => {
-        if (res.data.logged_in && this.state.loggedInStatus === "NOT_LOGGED_IN") {
+        if (res.data.logged_in && this.state.loggedInStatus === "Not logged in") {
           this.setState({
-            loggedInStatus: "LOGGED_IN",
+            loggedInStatus: "Logged in",
             user: res.data.user
           })
-        } else if (!res.data.logged_in && this.state.loggedInStatus === "LOGGED_IN") {
+        } else if (!res.data.logged_in && this.state.loggedInStatus === "Logged in") {
           this.setState({
-            loggedInStatus: "NOT_LOGGED_IN",
+            loggedInStatus: "Not logged in",
             user: {}
           })
         }
@@ -87,19 +88,23 @@ export default class App extends Component {
   render() {
     return (
       <div className='app'>
-      <button onClick={() => this.handleDelete()}>Delete Account</button>
 
         <BrowserRouter>
           <Switch>
             <Route exact path={"/"}
             render={props => (
-              <Home {...props} loggedInStatus={this.state.loggedInStatus} handleLogin={this.handleLogin} handleLogout={this.handleLogout}/>
+              <Home {...props} loggedInStatus={this.state.loggedInStatus} handleLogin={this.handleLogin} handleLogout={this.handleLogout} handleDelete={this.handleDelete} />
             )}
             />
             <Route exact path={"/dashboard"}
             render={props => (
               <Dashboard {...props} loggedInStatus={this.state.loggedInStatus}/>
 
+            )}
+            />
+            <Route exact path={"/notes"}
+            render={props => (
+              <Notes {...props} loggedInStatus={this.state.loggedInStatus} user={this.state.user}/>
             )}
             />
             <Route path="/map" exact component={Map}/>

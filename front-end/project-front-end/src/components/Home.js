@@ -10,7 +10,7 @@ class Home extends Component {
 
   handleSuccessfulAuth = data => {
     this.props.handleLogin(data);
-    this.props.history.push("/dashboard");
+    this.props.history.push("/map");
   };
 
   handleLogoutClick = () => {
@@ -32,6 +32,8 @@ class Home extends Component {
         <button onClick={() => this.handleLogoutClick()}>Logout</button>
         <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
         <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
+        <button onClick={() => this.handleDelete()}>Delete Account</button>
+        
       </div>
     );
   }
