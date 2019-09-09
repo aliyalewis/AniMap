@@ -5,7 +5,8 @@ function DeleteNote(props) {
 
   let handleClick = () => {
     fetch(`http://localhost:3001/comments/${props.note.id}`, {
-      method: "DELTE",
+      method: "DELETE",
+
       headers: {
         "Content-Type": "application/json"
       },
@@ -13,7 +14,6 @@ function DeleteNote(props) {
         id: props.note.id
       })
     })
-    .then(res => res.json())
   }
 
   return (
