@@ -49,7 +49,7 @@ class Registration extends Component {
           <input name="name" type="text" placeholder="name" onChange={this.handleChange} required/>
           <input name="username" type="text" placeholder="username" onChange={this.handleChange} required/>
           <input name="password" type="password" placeholder="Password" onChange={this.handleChange} required/>
-          <button type="submit">Register</button>
+          <button type="submit">Create An Account</button>
         </form>
       </div>
     )
