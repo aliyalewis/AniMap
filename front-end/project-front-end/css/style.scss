@@ -49,7 +49,7 @@ body {
 
 .header-three {
   font-family: "Hind Madurai", sans-serif;
-  font-size: 200%; }
+  font-size: 175%; }
 
 .header-four {
   font-family: "Hind Madurai", sans-serif;
@@ -65,8 +65,41 @@ body {
 .animal-header {
   text-align: center; }
 
+.animal-link {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 175%;
+  color: #2A2B2A;
+  text-decoration: none; }
+
 .link {
   font-family: "Merriweather Sans", sans-serif;
-  font-size: 230%; }
+  font-size: 200%;
+  color: #2A2B2A;
+  text-decoration: none; }
+
+.region-container {
+  flex-wrap: wrap; }
+
+.region-card {
+  padding-top: 10px;
+  border-style: groove;
+  text-align: justify; }
+
+.region-header-three {
+  text-align: center;
+  font-family: "Hind Madurai", sans-serif;
+  font-size: 175%;
+  color: #44633F; }
+
+.p-tag {
+  justify-content: space-around;
+  padding-left: 70px;
+  padding-right: 70px; }
+
+.region-header-five {
+  text-align: center;
+  justify-content: flex-start;
+  font-family: "Hind Madurai", sans-serif;
+  font-size: 150%; }
 
 /*# sourceMappingURL=style.scss.map */

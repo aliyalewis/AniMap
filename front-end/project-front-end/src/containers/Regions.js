@@ -22,7 +22,7 @@ class Regions extends Component {
       <div>
         <MainHeader />
         <br></br>
-        <div>
+        <div className="region-container">
           {
             this.state.regions.map(region => {
               return <RegionCard key={region.id} region={region}/>

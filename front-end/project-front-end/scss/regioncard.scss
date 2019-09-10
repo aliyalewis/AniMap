@@ -1,0 +1,29 @@
+.region-container{
+  flex-wrap: wrap;
+}
+
+.region-card{
+  padding-top: 10px;
+  border-style: groove;
+  text-align: justify;
+}
+
+.region-header-three{
+  text-align: center;
+  font-family: $font-text-secondary;
+  font-size: 175%;
+  color: $color-background;
+}
+
+.p-tag{
+  justify-content: space-around;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.region-header-five{
+  text-align: center;
+  justify-content: flex-start;
+  font-family: $font-text-secondary;
+  font-size: 150%;
+}
