@@ -59,6 +59,7 @@ function Map() {
           >
             {regionData.regions.map(region => (
               <Marker
+                className="marker"
                 key={region.id}
                 latitude={region.latitude}
                 longitude={region.longitude}
