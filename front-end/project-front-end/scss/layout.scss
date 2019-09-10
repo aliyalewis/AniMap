@@ -26,12 +26,47 @@ body{
 }
 
 .animal-card{
-  padding-bottom: 10px;
-  padding-top: 10px;
+  margin: 5px;
+  height: 600px;
   width: 410px;
   justify-content: space-around;
+  border: solid #7bb2d9;
+  overflow: auto;
+  justify-content: center;
 }
 
 .animal-images{
-  width: 400px;
+  margin: 0;
+  height: 20pc;
+  width: 20pc;
+  object-fit: scale-down;
+  margin-left: 40px;
+  margin-right: auto;
+}
+
+.map{
+  display: flex;
+  justify-content: space-around;
+}
+
+.p-tag{
+  display: flex;
+  flex-wrap: wrap;
+  font-family: $font-text-primary;
+  font-size: 150%;
+}
+
+.header-three{
+  font-family: $font-text-secondary;
+  font-size: 200%
+}
+
+.header-four{
+  font-family: $font-text-secondary;
+  font-size: 150%;
+}
+
+.header-five{
+  font-family: $font-text-secondary;
+  font-size: 150%;
 }
