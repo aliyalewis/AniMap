@@ -6,7 +6,7 @@ class NotesCard extends Component {
 
   render() {
     return (
-      <div>
+      <div className="notes-card">
         <h1>{this.props.note.title}</h1>
         <p>{this.props.note.body}</p>
         <EditNote note={this.props.note} />

@@ -47,11 +47,10 @@ function Map() {
 
   return (
     <div>
-      <div>
-        <MainHeader />
+    <MainHeader />
+      <div className="map">
           <ReactMapGL
             {...viewport}
-            // mapboxApiAccessToken={process.env.REACT_APP_ANIMAP_TOKEN}
             mapboxApiAccessToken={'pk.eyJ1IjoiYWxpeWFsZXdpczUiLCJhIjoiY2swOHNoYXZlMDFlMTNucXJ6cWxzMTV6ZCJ9.-5DNVakBMK4sh-uiRuBdEA'}
             mapStyle="mapbox://styles/aliyalewis5/cjzvietnc16z11cmtkqt64ce0"
             onViewportChange={viewport => {
