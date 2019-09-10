@@ -7,3 +7,21 @@
   position: relative;
   top: -5px;
 }
+
+.popup{
+  display:grid;
+  width: 50%;
+}
+
+.map-link{
+  text-decoration: none;
+  font-family: $font-heading;
+  font-size: 150%;
+  color: $color-text-primary;
+  background-color: $color-background-headings;
+  border-radius: 10px;
+}
+
+.map-link:hover{
+  opacity: .4;
+}

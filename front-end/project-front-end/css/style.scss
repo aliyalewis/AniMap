@@ -20,6 +20,9 @@ body {
   flex-wrap: wrap;
   justify-content: space-around; }
 
+.animal-card:hover {
+  box-shadow: #7880B5; }
+
 .animal-card {
   margin: 5px;
   height: 600px;
@@ -49,15 +52,18 @@ body {
 
 .header-three {
   font-family: "Hind Madurai", sans-serif;
-  font-size: 175%; }
+  font-size: 175%;
+  padding-left: 40px; }
 
 .header-four {
   font-family: "Hind Madurai", sans-serif;
-  font-size: 150%; }
+  font-size: 150%;
+  padding-left: 40px; }
 
 .header-five {
   font-family: "Hind Madurai", sans-serif;
-  font-size: 150%; }
+  font-size: 150%;
+  padding-left: 70px; }
 
 .main-header {
   text-align: center; }
@@ -103,6 +109,21 @@ body {
 .marker-btn:hover {
   position: relative;
   top: -5px; }
+
+.popup {
+  display: grid;
+  width: 50%; }
+
+.map-link {
+  text-decoration: none;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 150%;
+  color: #2A2B2A;
+  background-color: #B8E0D2;
+  border-radius: 10px; }
+
+.map-link:hover {
+  opacity: .4; }
 
 .region-container {
   flex-wrap: wrap; }

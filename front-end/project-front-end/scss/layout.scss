@@ -25,6 +25,10 @@ body{
   justify-content: space-around;
 }
 
+.animal-card:hover{
+  box-shadow: $button-color
+}
+
 .animal-card{
   margin: 5px;
   height: 600px;
@@ -58,15 +62,18 @@ body{
 
 .header-three{
   font-family: $font-text-secondary;
-  font-size: 175%
+  font-size: 175%;
+  padding-left: 40px;
 }
 
 .header-four{
   font-family: $font-text-secondary;
   font-size: 150%;
+  padding-left: 40px;
 }
 
 .header-five{
   font-family: $font-text-secondary;
   font-size: 150%;
+  padding-left: 70px;
 }
