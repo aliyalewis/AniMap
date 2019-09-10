@@ -80,11 +80,11 @@ function Map() {
               <Popup
                 latitude={selectedRegion.latitude}
                 longitude={selectedRegion.longitude}>
-                <h3>{location.name}</h3>
-                <p>{location ? location.desc : null}</p>
-                <h4>Countries within {selectedRegion.name}:</h4>
-                <p>{location ? location.countries : null}</p>
-                <Link to={'/animals/' + selectedRegion.id}>Learn more about {selectedRegion.name} animals</Link>
+                <h3 className="header-three">{location.name}</h3>
+                <p className="p-tag">{location ? location.desc : null}</p>
+                <h4 className="header-four">Countries within {selectedRegion.name}:</h4>
+                <p className="p-tag">{location ? location.countries : null}</p>
+                <Link to={'/animals/' + selectedRegion.id} >Learn more about {selectedRegion.name} animals</Link>
               </Popup>
             ) : null}
           </ReactMapGL>

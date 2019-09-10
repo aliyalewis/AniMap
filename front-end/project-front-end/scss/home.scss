@@ -1,0 +1,22 @@
+.home-page{
+  display: flex;
+  flex-flow: column;
+  padding-top: 30px;
+}
+
+.create-account{
+  display: flex;
+  flex-direction: row;
+}
+
+.login{
+  display: flex;
+  align-items: center;
+}
+
+.button{
+  font-family: $font-text-primary;
+  font-size: 150%;
+  background-color: $button-color;
+  border-radius: 12px;
+}
