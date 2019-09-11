@@ -23,17 +23,11 @@ class Fish extends Component {
       <div>
         <MainHeader />
         <AnimalHeader />
-        <div className="animal-background">
-          <div className="fish">
-            <div className="animals">
-                {this.state.animals.map(animal => {
-                  if (animal.aniClass === "Fish") {
-                    return <AnimalCard key={animal.id} animal={animal} />;
-                  }
-                })}
-            </div>
-          </div>
-        </div>
+        {this.state.animals.map(animal => {
+          if (animal.aniClass === "Fish") {
+            return <AnimalCard key={animal.id} animal={animal} />;
+          }
+        })}
       </div>
     );
   }

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import MainHeader from "../components/MainHeader";
-import RegionCard from "../components/RegionCard";
 
 class Regions extends Component {
   state = {
@@ -22,10 +21,13 @@ class Regions extends Component {
       <div>
         <MainHeader />
         <br></br>
-        <div className="region-container">
+        <div>
           {
             this.state.regions.map(region => {
-              return <RegionCard key={region.id} region={region}/>
+              return <div key={region.id}>
+                <h3>{region.name}</h3>
+                <p>{region.description}</p>
+              </div>
             })
           }
         </div>
