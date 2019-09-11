@@ -30,19 +30,28 @@ class Home extends Component {
       <div>
         <MainHeader />
 
-        <div className="home-page">
+        <div>
           <br />
           <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
           <br />
-          <p className="p-tag">OR</p>
           <br />
-          <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
         </div>
-        <h3 className="header-three-login">(You are: {this.props.loggedInStatus})</h3>
-
-        <button className="button" onClick={() => this.handleDelete()}>  Delete Account  </button>
-        <button className="button" onClick={() => this.handleLogoutClick()}>  Logout  </button>
-    </div>
+        <p className="p-tag">OR</p>
+        <div>
+          <h3 className="header-three-login">
+            (You are: {this.props.loggedInStatus})
+          </h3>
+          <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
+          <button className="button" onClick={() => this.handleDelete()}>
+            {" "}
+            Delete Account{" "}
+          </button>
+          <button className="button" onClick={() => this.handleLogoutClick()}>
+            {" "}
+            Logout{" "}
+          </button>
+        </div>
+      </div>
     );
   }
 }

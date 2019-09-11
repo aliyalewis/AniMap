@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route} from "react-router-dom";
 import axios from "axios";
 import Home from './components/Home';
-import Map from "./components/Map";
+import MapContainer from "./containers/MapContainer";
 import AllAnimals from "./components/AllAnimals";
 import FilteredAnimals from "./containers/FilteredAnimals";
 import AnimalCard from "./components/AnimalCard";
@@ -102,7 +102,7 @@ export default class App extends Component {
               <Notes {...props} loggedInStatus={this.state.loggedInStatus} user={this.state.user}/>
             )}
             />
-            <Route path="/map" exact component={Map}/>
+            <Route path="/map" exact component={MapContainer}/>
             <Route path="/animals/:id" exact component={FilteredAnimals} />
             <Route path="/allanimals" exact component={AllAnimals} />
             <Route path="/regions" exact component={Regions} />

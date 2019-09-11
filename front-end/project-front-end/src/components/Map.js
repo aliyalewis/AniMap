@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import regionData from "../data/region-locations.js";
 import mapImg from "../maps-and-flags.png";
-import MainHeader from "./MainHeader"
 
 function Map() {
   const [viewport, setViewport] = useState({
@@ -11,7 +10,7 @@ function Map() {
     longitude: 17.7578,
     width: "75vw",
     height: "75vh",
-    zoom: 1.9
+    zoom: 1.3
   });
 
   const [location, setLocation] = useState({});
@@ -47,7 +46,6 @@ function Map() {
 
   return (
     <div>
-    <MainHeader />
       <div className="map">
           <ReactMapGL
             {...viewport}
