@@ -14,7 +14,9 @@ body {
 
 .filtered-animals {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding-top: 10px;
+  justify-content: space-around; }
 
 .animals {
   display: flex;
@@ -147,6 +149,7 @@ body {
 .map {
   margin-top: 40px;
   border: solid;
+  border-color: #0E34A0;
   border-radius: 15px 50px; }
 
 .react-map {
@@ -163,7 +166,8 @@ body {
   overflow-y: scroll;
   border: solid #7bb2d9;
   border-radius: 15px 50px;
-  justify-content: center; }
+  justify-content: center;
+  text-align: center; }
 
 .header-two {
   text-align: center; }
