@@ -1,10 +1,32 @@
 .notes-container{
   padding-top: 40px;
-  display: grid;
+  // display: grid;
 }
 
 .notes-card{
-  padding-top: 30px;
-  border-radius: 10px;
-  border: solid;
+  margin: 5px;
+  height: 200px;
+  width: 410px;
+  justify-content: space-around;
+  overflow-y: scroll;
+  border: solid #7bb2d9;
+  border-radius: 15px 50px;
+  justify-content: center;
+}
+
+.header-two{
+  text-align: center;
+}
+
+.input{
+  font-size: 10px;
+}
+
+.notes-p-tag{
+  display: flex;
+  flex-wrap: wrap;
+  font-family: $font-text-primary;
+  font-size: 150%;
+  height: 150px;
+  text-align: center;
 }

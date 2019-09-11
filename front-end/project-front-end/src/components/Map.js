@@ -51,6 +51,7 @@ function Map() {
       <div className="map">
           <ReactMapGL
             {...viewport}
+            className="react-map"
             mapboxApiAccessToken={'pk.eyJ1IjoiYWxpeWFsZXdpczUiLCJhIjoiY2swOHNoYXZlMDFlMTNucXJ6cWxzMTV6ZCJ9.-5DNVakBMK4sh-uiRuBdEA'}
             mapStyle="mapbox://styles/aliyalewis5/cjzvietnc16z11cmtkqt64ce0"
             onViewportChange={viewport => {
