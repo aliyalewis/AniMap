@@ -37,7 +37,7 @@ class CreateNote extends Component {
         <form onSubmit={this.handleSubmit}>
           <input name="title" type="text" placeholder="Title" onChange={this.handleChange}/>
           <input name="body" type="text" placholder="Write your note here" onChange={this.handleChange}/>
-          <button type="submit">Create a new note</button>
+          <button className="button" type="submit">Create a new note</button>
         </form>
       </div>
     )

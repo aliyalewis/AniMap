@@ -34,11 +34,14 @@ class Home extends Component {
           <br />
           <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
           <br />
-          <h3 className="header-three">Status: {this.props.loggedInStatus}</h3>
+          <p className="p-tag">OR</p>
+          <br />
           <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
-          <button className="button" onClick={() => this.handleDelete()}>Delete Account</button>
-          <button className="button" onClick={() => this.handleLogoutClick()}>Logout</button>
         </div>
+        <h3 className="header-three-login">(You are: {this.props.loggedInStatus})</h3>
+
+        <button className="button" onClick={() => this.handleDelete()}>  Delete Account  </button>
+        <button className="button" onClick={() => this.handleLogoutClick()}>  Logout  </button>
     </div>
     );
   }

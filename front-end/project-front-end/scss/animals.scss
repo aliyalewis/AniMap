@@ -77,3 +77,14 @@ body{
   font-size: 150%;
   padding-left: 70px;
 }
+
+.fish{
+  display: transparent;
+  // flex-wrap: wrap;
+  // justify-content: space-around;
+  height: auto;
+  width:auto;
+  background-image: url("https://photos.app.goo.gl/qiPrQULUgfUbocsv9");
+  background-size: cover;
+  background-position: center;
+}

@@ -65,6 +65,14 @@ body {
   font-size: 150%;
   padding-left: 70px; }
 
+.fish {
+  display: transparent;
+  height: auto;
+  width: auto;
+  background-image: url("https://photos.app.goo.gl/qiPrQULUgfUbocsv9");
+  background-size: cover;
+  background-position: center; }
+
 .main-header {
   text-align: center; }
 
@@ -98,9 +106,15 @@ body {
 
 .button {
   font-family: "Red Hat Display", sans-serif;
-  font-size: 150%;
-  background-color: #7880B5;
-  border-radius: 12px; }
+  font-size: 125%;
+  border-radius: 10%; }
+
+.button:active {
+  color: #B8E0D2; }
+
+.header-three-login {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 125%; }
 
 .marker-btn {
   background: none;
@@ -125,6 +139,15 @@ body {
 .map-link:hover {
   opacity: .4; }
 
+.notes-container {
+  padding-top: 40px;
+  display: grid; }
+
+.notes-card {
+  padding-top: 30px;
+  border-radius: 10px;
+  border: solid; }
+
 .region-container {
   flex-wrap: wrap; }
 
@@ -137,7 +160,7 @@ body {
   text-align: center;
   font-family: "Hind Madurai", sans-serif;
   font-size: 175%;
-  color: #2A2B2A;
+  color: black;
   opacity: 1; }
 
 .p-tag {

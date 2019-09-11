@@ -16,7 +16,15 @@
 
 .button{
   font-family: $font-text-primary;
-  font-size: 150%;
-  background-color: $button-color;
-  border-radius: 12px;
+  font-size: 125%;
+  border-radius: 10%;
+}
+
+.button:active{
+  color: $color-background-headings;
+}
+
+.header-three-login{
+  font-family: $font-text-primary;
+  font-size: 125%;
 }
