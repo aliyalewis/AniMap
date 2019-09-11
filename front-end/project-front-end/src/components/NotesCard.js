@@ -6,13 +6,11 @@ class NotesCard extends Component {
 
   render() {
     return (
-      <div className="notes-card" >
-        <h2 className="header-two">{this.props.note.title}</h2>
-        <p className="notes-p-tag">{this.props.note.body}</p>
-        <br />
+      <div>
+        <h1>{this.props.note.title}</h1>
+        <p>{this.props.note.body}</p>
         <EditNote note={this.props.note} />
         <DeleteNote note={this.props.note}/>
-        <br />
       </div>
     )
   }

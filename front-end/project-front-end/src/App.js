@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route} from "react-router-dom";
 import axios from "axios";
 import Home from './components/Home';
-import MapContainer from "./containers/MapContainer";
+import Dashboard from "./components/Dashboard";
+import Map from "./components/Map";
 import AllAnimals from "./components/AllAnimals";
 import FilteredAnimals from "./containers/FilteredAnimals";
 import AnimalCard from "./components/AnimalCard";
@@ -14,8 +15,6 @@ import Amphibians from "./components/Amphibians";
 import Birds from "./components/Birds";
 import Favorites from "./components/Favorites";
 import Notes from "./containers/Notes";
-import "../css/style.scss"
-
 
 export default class App extends Component {
 
@@ -97,12 +96,18 @@ export default class App extends Component {
               <Home {...props} loggedInStatus={this.state.loggedInStatus} handleLogin={this.handleLogin} handleLogout={this.handleLogout} handleDelete={this.handleDelete} />
             )}
             />
+            <Route exact path={"/dashboard"}
+            render={props => (
+              <Dashboard {...props} loggedInStatus={this.state.loggedInStatus}/>
+
+            )}
+            />
             <Route exact path={"/notes"}
             render={props => (
               <Notes {...props} loggedInStatus={this.state.loggedInStatus} user={this.state.user}/>
             )}
             />
-            <Route path="/map" exact component={MapContainer}/>
+            <Route path="/map" exact component={Map}/>
             <Route path="/animals/:id" exact component={FilteredAnimals} />
             <Route path="/allanimals" exact component={AllAnimals} />
             <Route path="/regions" exact component={Regions} />

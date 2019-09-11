@@ -23,7 +23,7 @@ class AllAnimals extends Component {
       <div>
       <MainHeader />
       <AnimalHeader />
-        <div className="all-animals">
+        <div>
           {this.state.animals.map(animal => {
             return <AnimalCard key={animal.id} animal={animal} />;
           })}
