@@ -66,6 +66,7 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.3.1",
     "redux": "^3.7.2",
+    "sass": "^1.23.0-module.beta.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.21.0",
     "webpack": "^4.16.4",

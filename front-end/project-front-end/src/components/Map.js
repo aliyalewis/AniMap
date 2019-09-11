@@ -3,15 +3,14 @@ import React, { useState, useEffect } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import regionData from "../data/region-locations.js";
 import mapImg from "../maps-and-flags.png";
-import MainHeader from "./MainHeader"
 
 function Map() {
   const [viewport, setViewport] = useState({
     latitude: 11.5024,
     longitude: 17.7578,
-    width: "100vw",
-    height: "100vh",
-    zoom: 1.9
+    width: "75vw",
+    height: "75vh",
+    zoom: 1.3
   });
 
   const [location, setLocation] = useState({});
@@ -47,11 +46,10 @@ function Map() {
 
   return (
     <div>
-      <div>
-        <MainHeader />
+      <div className="map">
           <ReactMapGL
             {...viewport}
-            // mapboxApiAccessToken={process.env.REACT_APP_ANIMAP_TOKEN}
+            className="react-map"
             mapboxApiAccessToken={'pk.eyJ1IjoiYWxpeWFsZXdpczUiLCJhIjoiY2swOHNoYXZlMDFlMTNucXJ6cWxzMTV6ZCJ9.-5DNVakBMK4sh-uiRuBdEA'}
             mapStyle="mapbox://styles/aliyalewis5/cjzvietnc16z11cmtkqt64ce0"
             onViewportChange={viewport => {
@@ -60,6 +58,7 @@ function Map() {
           >
             {regionData.regions.map(region => (
               <Marker
+                className="marker"
                 key={region.id}
                 latitude={region.latitude}
                 longitude={region.longitude}
@@ -79,12 +78,12 @@ function Map() {
             {selectedRegion ? (
               <Popup
                 latitude={selectedRegion.latitude}
-                longitude={selectedRegion.longitude}>
-                <h3>{location.name}</h3>
-                <p>{location ? location.desc : null}</p>
-                <h4>Countries within {selectedRegion.name}:</h4>
-                <p>{location ? location.countries : null}</p>
-                <Link to={'/animals/' + selectedRegion.id}>Learn more about {selectedRegion.name} animals</Link>
+                longitude={selectedRegion.longitude} className="popup">
+                <h3 className="header-three">{location.name}</h3>
+                <p className="p-tag">{location ? location.desc : null}</p>
+                <h4 className="header-four">Countries within {selectedRegion.name}:</h4>
+                <p className="p-tag">{location ? location.countries : null}</p>
+                <Link to={'/animals/' + selectedRegion.id} className="map-link">  Learn more about animals in {selectedRegion.name}  </Link>
               </Popup>
             ) : null}
           </ReactMapGL>
