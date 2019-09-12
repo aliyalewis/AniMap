@@ -29,15 +29,13 @@ class Home extends Component {
     return (
       <div>
         <MainHeader />
-
         <div>
           <br />
           <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
           <br />
-          <br />
         </div>
         <p className="p-tag">OR</p>
-        <div>
+        <div className="home-section">
           <h3 className="header-three-login">
             (You are: {this.props.loggedInStatus})
           </h3>
@@ -51,6 +49,7 @@ class Home extends Component {
             Logout{" "}
           </button>
         </div>
+        <h3 className="home-h3">*You must create an account or log in to access the "Notes" tab.</h3>
       </div>
     );
   }

@@ -31,7 +31,6 @@ class Notes extends Component {
           <CreateNote user_id={this.props.user.id}/>
         </div>
         <div className="notes-container">
-          <br />
           {this.state.notes.map(note => {
             if (note.user_id === this.props.user.id) {
               return <NotesCard key={note.id} note={note} user_id={this.state.id}/>

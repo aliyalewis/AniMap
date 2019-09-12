@@ -1,23 +1,18 @@
 .notes-container{
   display: flex;
-  flex-wrap: flex;
-  flex-flow: column-reverse;
-  padding-top: 40px;
+  flex-wrap: wrap;
+  flex-direction: row;
   background-color: #F7EBEC;
-  height: 100%;
   align-content: center;
-
-  // width: 75vw;
-  // content: normal;
 }
 
 .notes-card{
   display: flex;
-
   margin: 5px 5px 5px 5px;
   height: 200px;
   width: 410px;
   overflow-y: scroll;
+  background-color: white;
   border: solid #5BBA6F;
   border-radius: 15px 50px;
 }
@@ -27,14 +22,26 @@
   width: 400px;
 }
 
+.new-textarea{
+  height: 100px;
+  width: 135px;
+  font-size: 15px;
+  overflow: auto;
+}
+
 .note-background{
-  padding: 10px;
+  display: flex;
+  padding-top: 10px;
   background-color: #F7EBEC;
+  height: 25vh;
+  width: 100vw;
+  justify-content: center;
 }
 
 .input{
-  font-size: 10px;
+  font-size: 15px;
   height: 20px;
+  width: 135px;
 }
 
 .new-input{
@@ -48,7 +55,8 @@
   border: none;
   height: 100px;
   width: 300px;
-  border-radius: 20px;
+  font-size: 15px;
+  border-radius: 5px;
 }
 
 .notes-p-tag{

@@ -12,8 +12,8 @@
   background-color: $color-background-headings;
 }
 
-.button:active {
-  color: $color-background-headings;
+.button:hover {
+  opacity: .4;
 }
 
 .header-three-login {
@@ -26,5 +26,15 @@
   border-radius: 15px 50px;
   margin: 10px;
   padding: 10px;
+  text-align: center;
+}
+
+.home-input{
+  border-radius: 10px;
+  height: 20px;
+  font-size: 19px;
+}
+
+.home-h3{
   text-align: center;
 }

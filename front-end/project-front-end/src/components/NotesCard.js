@@ -9,7 +9,6 @@ class NotesCard extends Component {
       <div className="notes-card" >
         <h2 className="header-two">{this.props.note.title}</h2>
         <p className="notes-p-tag">{this.props.note.body}</p>
-        <br />
         <EditNote note={this.props.note} />
         <DeleteNote note={this.props.note}/>
         <br />

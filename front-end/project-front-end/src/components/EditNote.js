@@ -42,7 +42,7 @@ class EditNote extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <input className="input" name="title" type="text" placeholder={this.props.note.title} onChange={this.handleChange} required/>
-          <input className="input" name="body" type="text" placeholder={this.props.note.body} onChange={this.handleChange} required />
+          <textarea className="new-textarea" name="body" type="text" placeholder={this.props.note.body} onChange={this.handleChange} required />
           <button className="button" type="submit">Edit Note</button>
         </form>
       </div>
