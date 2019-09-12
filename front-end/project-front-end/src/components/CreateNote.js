@@ -35,8 +35,9 @@ class CreateNote extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input className="input" name="title" type="text" placeholder="Title" onChange={this.handleChange}/>
-          <input className="input" name="body" type="text" placholder="Write your note here" onChange={this.handleChange}/>
+          <input className="new-input" name="title" type="text" placeholder="Title" onChange={this.handleChange}/>
+          <br />
+          <textarea className="textarea" name="body" type="textarea" placholder="Write your note here" onChange={this.handleChange}/>
           <button className="button" type="submit">Create a new note</button>
         </form>
       </div>

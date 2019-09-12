@@ -27,8 +27,10 @@ class Notes extends Component {
     return (
       <div>
         <MainHeader />
-        <div className="notes-container">
+        <div className="note-background">
           <CreateNote user_id={this.props.user.id}/>
+        </div>
+        <div className="notes-container">
           <br />
           {this.state.notes.map(note => {
             if (note.user_id === this.props.user.id) {
