@@ -112,7 +112,8 @@ body {
 .button {
   font-family: "Merriweather Sans", sans-serif;
   font-size: 125%;
-  border-radius: 10%;
+  border-radius: 5px;
+  border: none;
   background-color: #B8E0D2; }
 
 .button:active {
@@ -153,7 +154,7 @@ body {
   font-size: 150%;
   color: #2A2B2A;
   background-color: #B8E0D2;
-  border-radius: 10px; }
+  border-radius: 5px; }
 
 .map-link:hover {
   opacity: .4; }
@@ -168,7 +169,11 @@ body {
   border-radius: 12px 46px; }
 
 .notes-container {
-  padding-top: 40px; }
+  padding-top: 40px;
+  background-color: #F7EBEC;
+  height: 100%;
+  width: 75vw;
+  justify-content: center; }
 
 .notes-card {
   margin: 5px 5px 5px 5px;
@@ -178,9 +183,7 @@ body {
   overflow-y: scroll;
   border: solid #5BBA6F;
   border-radius: 15px 50px;
-  justify-content: center;
-  text-align: center;
-  background-color: #EDBFB7; }
+  text-align: center; }
 
 .header-two {
   text-align: center; }
