@@ -1,11 +1,28 @@
 .region-container{
+  padding-top: 10px;
+  display: flex;
   flex-wrap: wrap;
+  flex-flow: wrap;
+  justify-content: center;
+  background-color: #C4B7CB;
 }
 
 .region-card{
   padding-top: 10px;
-  border-style: groove;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  width: 40vw;
+  border-style: solid;
+  border-color: gray;
+  border-radius: 15px;
   text-align: justify;
+  background-color: white;
+}
+
+.region-card:hover{
+  border-color: #48ACF0;
+  position: relative;
+  top: -10px;
 }
 
 .region-header-three{
@@ -14,7 +31,6 @@
   font-size: 175%;
   color: black;
   opacity: 1;
-  // text-shadow: 2px 2px gray;
 }
 
 .p-tag{

@@ -128,7 +128,8 @@ body {
   border-radius: 15px 50px;
   margin: 10px;
   padding: 10px;
-  text-align: center; }
+  text-align: center;
+  border-color: #BBC7CE; }
 
 .home-input {
   border-radius: 10px;
@@ -236,12 +237,28 @@ body {
   text-align: center; }
 
 .region-container {
-  flex-wrap: wrap; }
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: wrap;
+  justify-content: center;
+  background-color: #C4B7CB; }
 
 .region-card {
   padding-top: 10px;
-  border-style: groove;
-  text-align: justify; }
+  margin-bottom: 10px;
+  margin-right: 20px;
+  width: 40vw;
+  border-style: solid;
+  border-color: gray;
+  border-radius: 15px;
+  text-align: justify;
+  background-color: white; }
+
+.region-card:hover {
+  border-color: #48ACF0;
+  position: relative;
+  top: -10px; }
 
 .region-header-three {
   text-align: center;

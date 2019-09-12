@@ -41,12 +41,11 @@ class Home extends Component {
           </h3>
           <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
           <button className="button" onClick={() => this.handleDelete()}>
-            {" "}
-            Delete Account{" "}
+            Delete Account
           </button>
+          <br />
           <button className="button" onClick={() => this.handleLogoutClick()}>
-            {" "}
-            Logout{" "}
+            Logout
           </button>
         </div>
         <h3 className="home-h3">*You must create an account or log in to access the "Notes" tab.</h3>
