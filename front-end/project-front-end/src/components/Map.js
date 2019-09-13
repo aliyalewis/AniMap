@@ -10,7 +10,7 @@ function Map() {
     longitude: 17.7578,
     width: "75vw",
     height: "75vh",
-    zoom: 1.3
+    zoom: 1.5
   });
 
   const [location, setLocation] = useState({});

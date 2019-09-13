@@ -40,7 +40,7 @@ class Home extends Component {
             (You are: {this.props.loggedInStatus})
           </h3>
           <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
-          <button className="button" onClick={() => this.handleDelete()}>
+          <button className="button" onClick={() => this.props.handleDelete()}>
             Delete Account
           </button>
           <br />
