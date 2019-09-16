@@ -22,13 +22,13 @@ class FilteredAnimals extends Component {
     return (
       <div>
         <MainHeader />
-        <p>
+        <div className="filtered-animals">
           {this.state.animals.map(animal => {
             if ("" + animal.region_id === this.props.match.params.id) {
               return <div> <AnimalCard animal={animal} /></div>;
             }
           })}
-        </p>
+        </div>
       </div>
     );
   }
