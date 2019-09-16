@@ -197,12 +197,21 @@ body {
   text-align: center; }
 
 .region-container {
-  flex-wrap: wrap; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
 
 .region-card {
-  padding-top: 10px;
-  border-style: groove;
-  text-align: justify; }
+  flex-flow: wrap;
+  margin: 5px;
+  height: 500px;
+  width: 410px;
+  justify-content: space-between;
+  border: solid #7bb2d9;
+  border-radius: 15px 50px;
+  overflow: auto;
+  justify-content: center;
+  background-color: white; }
 
 .region-header-three {
   text-align: center;
