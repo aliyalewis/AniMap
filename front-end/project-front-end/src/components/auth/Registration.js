@@ -46,8 +46,8 @@ class Registration extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit} >
-          <input name="name" type="text" placeholder="name" onChange={this.handleChange} required/>
-          <input name="username" type="text" placeholder="username" onChange={this.handleChange} required/>
+          <input name="name" type="text" placeholder="Name" onChange={this.handleChange} required/>
+          <input name="username" type="text" placeholder="Username" onChange={this.handleChange} required/>
           <input name="password" type="password" placeholder="Password" onChange={this.handleChange} required/>
           <br />
           <button className="button" type="submit">Create An Account</button>

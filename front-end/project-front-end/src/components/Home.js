@@ -32,7 +32,7 @@ class Home extends Component {
 
         <div className="home-section">
           <br />
-          Create An Account
+          <p className="p-tag">Create An Account</p>
           <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
           <br />
           <br />

@@ -45,7 +45,7 @@ class Login extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit} >
-          <input name="username" type="text" placeholder="username" onChange={this.handleChange} required/>
+          <input name="username" type="text" placeholder="Username" onChange={this.handleChange} required/>
           <input name="password" type="password" placeholder="Password" onChange={this.handleChange} required/>
           <button className="button" type="submit">Login</button>
         </form>
