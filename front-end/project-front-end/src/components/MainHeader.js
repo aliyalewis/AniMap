@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 
 function MainHeader(props) {
   return (
-    <div>
-      <Link to="/map">Map </Link>| <Link to="/allanimals">Animals </Link>|{" "}
-      <Link to="/regions">Regions </Link>|{" "}
-      <Link to="/">Log In/Log Out</Link>| {" "}
-      <Link to="/notes">Notes</Link>
+    <div className="main-header">
+      <Link to="/map" className="link">Map | </Link>
+      <Link to="/allanimals" className="link">Animals | </Link>
+      <Link to="/regions" className="link">Regions | </Link>
+      <Link to="/" className="link">Log In/Log Out | </Link>
+      <Link to="/notes" className="link">Notes</Link>
     </div>
   );
 }

@@ -17,7 +17,7 @@ function DeleteNote(props) {
   }
 
   return (
-    <button onClick={() => handleClick()}>Remove Note</button>
+    <button className="button" onClick={() => handleClick()}>Remove Note</button>
   )
 }
 
