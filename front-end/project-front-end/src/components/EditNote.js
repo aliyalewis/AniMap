@@ -41,8 +41,8 @@ class EditNote extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input className="input" name="title" type="text" placeholder={this.props.note.title} onChange={this.handleChange} required/>
-          <input className="input" name="body" type="text" placeholder={this.props.note.body} onChange={this.handleChange} required />
+          <input name="title" type="text" placeholder={this.props.note.title} onChange={this.handleChange} required/>
+          <input name="body" type="text" placeholder={this.props.note.body} onChange={this.handleChange} required />
           <button className="button" type="submit">Edit Note</button>
         </form>
       </div>
