@@ -30,25 +30,24 @@ class Home extends Component {
       <div>
         <MainHeader />
 
-        <div>
+        <div className="home-section">
           <br />
+          Create An Account
           <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
           <br />
           <br />
         </div>
         <p className="p-tag">OR</p>
-        <div>
+        <div className="home-section">
           <h3 className="header-three-login">
             (You are: {this.props.loggedInStatus})
           </h3>
           <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
-          <button className="button" onClick={() => this.handleDelete()}>
-            {" "}
-            Delete Account{" "}
+          <button className="button" onClick={() => this.props.handleDelete()}>
+            Delete Account
           </button>
           <button className="button" onClick={() => this.handleLogoutClick()}>
-            {" "}
-            Logout{" "}
+            Logout
           </button>
         </div>
       </div>

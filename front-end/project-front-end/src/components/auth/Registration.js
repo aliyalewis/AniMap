@@ -44,7 +44,7 @@ class Registration extends Component {
 
   render() {
     return (
-      <div className="home-section">
+      <div>
         <form onSubmit={this.handleSubmit} >
           <input name="name" type="text" placeholder="name" onChange={this.handleChange} required/>
           <input name="username" type="text" placeholder="username" onChange={this.handleChange} required/>

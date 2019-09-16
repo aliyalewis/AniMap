@@ -15,7 +15,6 @@ class Login extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-
     const { username, password} = this.state;
     axios.post("http://localhost:3001/sessions", {
       user: {
@@ -44,7 +43,7 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="home-section">
+      <div>
         <form onSubmit={this.handleSubmit} >
           <input name="username" type="text" placeholder="username" onChange={this.handleChange} required/>
           <input name="password" type="password" placeholder="Password" onChange={this.handleChange} required/>
