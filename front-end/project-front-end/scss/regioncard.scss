@@ -2,12 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #DCEAB2;
 }
 
 .region-card{
   flex-flow: wrap;
   margin: 5px;
-  height: 500px;
+  height: 400px;
   width: 410px;
   justify-content: space-between;
   border: solid #7bb2d9;
@@ -15,6 +16,11 @@
   overflow: auto;
   justify-content: center;
   background-color: white;
+}
+
+.region-card:hover{
+  position: relative;
+  top: -10px;
 }
 
 .region-header-three{
