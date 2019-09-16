@@ -168,7 +168,20 @@ body {
   border-radius: 12px 46px; }
 
 .notes-container {
-  padding-top: 40px; }
+  display: flex;
+  flex-wrap: wrap-reverse;
+  padding-top: 40px;
+  background-color: #F1E4F3;
+  width: 1500px; }
+
+.new-notes-container {
+  justify-content: center;
+  padding-top: 5px;
+  background-color: #F1E4F3;
+  width: 1500px; }
+
+.notess-header {
+  display: visible; }
 
 .notes-card {
   margin: 5px 5px 5px 5px;
@@ -180,7 +193,7 @@ body {
   border-radius: 15px 50px;
   justify-content: center;
   text-align: center;
-  background-color: #EDBFB7; }
+  background-color: white; }
 
 .header-two {
   text-align: center; }
