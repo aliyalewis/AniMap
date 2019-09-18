@@ -1,9 +1,9 @@
 # AniMap
 
-## Link to Video Demo of AniMap:
+## Link to Video Demo:
 (https://drive.google.com/open?id=1cdoVbMrxkOYBLwv1OkaORK1X8ye2ON1F)
 
-## Instruction for Running AniMap:
+## How to Run AniMap:
 
 1. Clone this repo onto your local system.
 2. CD into `animap_app` and run 'rails s -p 3001' in the terminal.
