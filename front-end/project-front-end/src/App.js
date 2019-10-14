@@ -92,7 +92,7 @@ export default class App extends Component {
 
         <BrowserRouter>
           <Switch>
-            <Route exact path={"/"}
+            <Route exact path={"/login"}
             render={props => (
               <Home {...props} loggedInStatus={this.state.loggedInStatus} handleLogin={this.handleLogin} handleLogout={this.handleLogout} handleDelete={this.handleDelete} />
             )}
@@ -102,7 +102,7 @@ export default class App extends Component {
               <Notes {...props} loggedInStatus={this.state.loggedInStatus} user={this.state.user}/>
             )}
             />
-            <Route path="/map" exact component={MapContainer}/>
+            <Route path="/" exact component={MapContainer}/>
             <Route path="/animals/:id" exact component={FilteredAnimals} />
             <Route path="/allanimals" exact component={AllAnimals} />
             <Route path="/regions" exact component={Regions} />
