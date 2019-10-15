@@ -3,15 +3,20 @@ import MainHeader from "./MainHeader";
 import AnimalHeader from "./AnimalHeader";
 // import AnimalCard from "./AnimalCard";
 import Amphibians from "./Amphibians";
-import Birds from "./Bird";
+import Birds from "./Birds";
 import Fish from "./Fish";
 import Mammals from "./Mammals";
 import Reptiles from "./Reptiles";
 
-
 class Filter extends Component {
+
     state = {
-        animals: []
+        animals: [],
+        amphibians: [],
+        birds: [],
+        fish: [],
+        mammals: [],
+        reptiles: []
     };
 
 
@@ -25,36 +30,41 @@ class Filter extends Component {
         });
     }
 
+   
+
     render() {
-        return {
+        return (
             <div>
+                console.log(this.state.amphibians)
                 <MainHeader />
                 <AnimalHeader />
                 <div className="animal-background">
                     <div className="animals">
                         {this.state.animals.map(animal => {
-                            switch(animal) {
-                                case "Amphibian":
-                                    return <Amphibians key={animal.id} animal=animal} />;
-                                    break;
-                                case "Bird":
-                                    return <Birds key={animal.id} animal=animal} />;
-                                    break;
-                                case "Fish":
-                                    return <Fish key={animal.id} animal=animal} />;
-                                    break;
-                                case "Mammal":
-                                    return <Mammals key={animal.id} animal=animal} />;
-                                    break;
-                                case "Reptile":
-                                    return <Reptiles key={animal.id} animal=animal} />;
-                                    break;
+                            switch(animal.aniClass) {
+                                case "Amphibian": 
+                                    this.setState({
+                                        amphibians: animal
+                                    })
+                                    return <Amphibians key={animal.id} animal={animal}/>;
+                                case "Bird": 
+                                    return <Birds key={animal.id} animal={animal} />;
+                                case "Fish": 
+                                    return <Fish key={animal.id} animal={animal} />;
+                                case "Mammal": 
+                                    return <Mammals key={animal.id} animal={animal} />;
+                                case "Reptile": 
+                                    return <Reptiles key={animal.id} animal={animal} />;
                             }
                         })}
                     </div>
                 </div>
             </div>
-        }
+        )
+    }
+
+    componentWillUnmount() {
+        this.controller.abort();
     }
 
 }

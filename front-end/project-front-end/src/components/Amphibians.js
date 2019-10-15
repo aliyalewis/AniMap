@@ -4,7 +4,7 @@ import MainHeader from "./MainHeader";
 import AnimalHeader from "./AnimalHeader";
 import Filter from "./Filter";
 
-function Amphibians() {
+const Amphibians = (props) => {
 
   // state = {
   //   animals: []
@@ -21,10 +21,12 @@ function Amphibians() {
   // }
 
 
-    return 
+    return (
       <p>
-      {props.key, props.animal}
+        {console.log(props)}
       </p>
+    )
+      
   
   
 

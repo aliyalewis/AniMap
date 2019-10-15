@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import AnimalHeader from "./AnimalHeader";
-import MainHeader from "./MainHeader";
 
 class AnimalCard extends Component {
   render() {

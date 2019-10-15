@@ -14,6 +14,7 @@ import Amphibians from "./components/Amphibians";
 import Birds from "./components/Birds";
 import Favorites from "./components/Favorites";
 import Notes from "./containers/Notes";
+import Filter from "./components/Filter";
 import "../css/style.scss"
 
 
@@ -102,9 +103,10 @@ export default class App extends Component {
               <Notes {...props} loggedInStatus={this.state.loggedInStatus} user={this.state.user}/>
             )}
             />
+            <Route path="/filter" exact component={Filter}/>
             <Route path="/" exact component={MapContainer}/>
             <Route path="/animals/:id" exact component={FilteredAnimals} />
-            <Route path="/allanimals" exact component={AllAnimals} />
+            {/* <Route path="/allanimals" exact component={AllAnimals} /> */}
             <Route path="/regions" exact component={Regions} />
             <Route path="/mammals" exact component={Mammals} />
             <Route path="/fish" exact component={Fish} />

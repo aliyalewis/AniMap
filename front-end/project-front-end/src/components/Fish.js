@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import AnimalCard from "./AnimalCard";
-import MainHeader from "./MainHeader";
-import AnimalHeader from "./AnimalHeader";
 
 class Fish extends Component {
   state = {
@@ -21,8 +19,6 @@ class Fish extends Component {
   render() {
     return (
       <div>
-        <MainHeader />
-        <AnimalHeader />
         <div className="animal-background">
           <div className="fish">
             <div className="animals">
