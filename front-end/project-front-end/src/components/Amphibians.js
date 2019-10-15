@@ -1,52 +1,34 @@
-import React from "react";
+import React, { Component } from "react";
 import AnimalCard from "./AnimalCard";
 import MainHeader from "./MainHeader";
 import AnimalHeader from "./AnimalHeader";
 import Filter from "./Filter";
 
-const Amphibians = (props) => {
+class Amphibians extends Component {
+  constructor(props) {
+    super(props);
+  }
+  
 
-  // state = {
-  //   animals: []
-  // };
-
-  // componentDidMount() {
-  //   fetch("http://localhost:3001/animals")
-  //     .then(res => res.json())
-  //     .then(json => {
-  //       return this.setState({
-  //         animals: json
-  //       });
-  //     });
-  // }
-
-
+  render() {
     return (
-      <p>
-        {console.log(props)}
-      </p>
+      <div>
+        {console.log(this.props)}
+      </div>
     )
+  }
+}
+
+// const Amphibians = (props) => {
+
+
+//     return (
+//       <div>
+//         {console.log(props)};
+//       </div>
+//     ) 
       
   
-  
-
-  // render() {
-  //   return (
-  //     <div>
-  //       <MainHeader />
-  //       <AnimalHeader />
-  //       <div className="animal-background">
-  //         <div className="animals">
-  //           {this.state.animals.map(animal => {
-  //             if (animal.aniClass === "Amphibian") {
-  //               return <AnimalCard key={animal.id} animal={animal} />;
-  //             }
-  //           })}
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
-  // }
-}
+// }
 
 export default Amphibians;

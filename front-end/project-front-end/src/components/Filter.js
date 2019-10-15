@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import MainHeader from "./MainHeader";
 import AnimalHeader from "./AnimalHeader";
-// import AnimalCard from "./AnimalCard";
 import Amphibians from "./Amphibians";
 import Birds from "./Birds";
 import Fish from "./Fish";
@@ -19,53 +18,58 @@ class Filter extends Component {
         reptiles: []
     };
 
-
-    componentDidMount() {
-        fetch("http://localhost:3001/animals")
-        .then(res => res.json())
-        .then(json => {
-            return this.setState({
-                animals: json
-            });
-        });
+   fetchData =  async() => {
+        const response = await fetch("http://localhost:3001/animals");
+        const json = await response.json();
+        this.setState({ animals: json})
     }
 
-   
+    componentDidMount() {
+        this.fetchData();
+    }
+
+    filterer = (animals) => {
+        for(let i = 0; i < animals.length; i++) {
+            if(animals[i].aniClass === "Amphibian") {
+                this.state.amphibians.push(animals[i]);
+                console.log("amphs ", this.state.amphibians)
+            } else if (animals[i].aniClass === "Bird")
+            {
+                this.state.birds.push(animals[i]);
+                console.log("birds ", this.state.birds)
+            } else if (animals[i].aniClass === "Fish") {
+                this.state.fish.push(animals[i]);
+                console.log("fish ", this.state.fish)
+            } else if (animals[i].aniClass === "Mammal") {
+                this.state.mammals.push(animals[i]);
+                console.log("mammals ", this.state.mammals)
+            } else {
+                this.state.reptiles.push(animals[i])
+                console.log("reptiles ", this.state.reptiles)
+            }
+         }
+    }
+
+    mapper = () => {
+        
+    }
 
     render() {
         return (
             <div>
-                console.log(this.state.amphibians)
                 <MainHeader />
                 <AnimalHeader />
                 <div className="animal-background">
                     <div className="animals">
-                        {this.state.animals.map(animal => {
-                            switch(animal.aniClass) {
-                                case "Amphibian": 
-                                    this.setState({
-                                        amphibians: animal
-                                    })
-                                    return <Amphibians key={animal.id} animal={animal}/>;
-                                case "Bird": 
-                                    return <Birds key={animal.id} animal={animal} />;
-                                case "Fish": 
-                                    return <Fish key={animal.id} animal={animal} />;
-                                case "Mammal": 
-                                    return <Mammals key={animal.id} animal={animal} />;
-                                case "Reptile": 
-                                    return <Reptiles key={animal.id} animal={animal} />;
-                            }
-                        })}
+                        {
+                            this.filterer(this.state.animals)
+                         }
                     </div>
                 </div>
             </div>
         )
     }
 
-    componentWillUnmount() {
-        this.controller.abort();
-    }
 
 }
 
